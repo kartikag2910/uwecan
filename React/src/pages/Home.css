@@ -1,0 +1,40 @@
+.home{
+
+}
+
+.container1{
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+left: 10px;
+top: -100px;
+
+}
+.heading{
+    font-size: 60px;
+
+    }
+.btn1{
+    height: 50px;
+    width: 170px;
+    margin: 25px;
+    border-radius: 15px;
+    border: none;
+    background-color: #42b72a;
+    font-size: 21px;
+    color: white;
+    cursor: pointer;
+}
+.btn2{
+    height: 50px;
+    width: 170px;
+    margin: 25px;
+    border-radius: 15px;
+    border: none;
+    background-color: #1775ee;
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+}
