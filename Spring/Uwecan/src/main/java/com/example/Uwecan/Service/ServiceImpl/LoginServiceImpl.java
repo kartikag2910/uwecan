@@ -12,12 +12,12 @@ public class LoginServiceImpl implements LoginService {
     @Autowired
     UserDetailsRepository userDetailsRepository;
     @Override
-    public String addUser(UserDetailsDTO userDetailsDTO) {
+    public Integer addUser(UserDetailsDTO userDetailsDTO) {
         UserDetailsEntity userDetailsEntity=new UserDetailsEntity();
         userDetailsEntity.setAddress(userDetailsDTO.getAddress());
         userDetailsEntity.setName(userDetailsDTO.getName());
         userDetailsEntity.setPhoneNumber(userDetailsDTO.getPhoneNumber());
         userDetailsRepository.save(userDetailsEntity);
-        return "Success";
+        return userDetailsEntity.getId();
     }
 }

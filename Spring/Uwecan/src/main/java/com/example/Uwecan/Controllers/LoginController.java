@@ -17,7 +17,7 @@ public class LoginController {
 
     @PostMapping("/addUser")
     @Operation(summary = "To add a new user.")
-    public String addUser(UserDetailsDTO userDetailsDTO){
+    public Integer addUser(UserDetailsDTO userDetailsDTO){
         return loginService.addUser(userDetailsDTO);
     }
 
