@@ -28,6 +28,7 @@ public class ProductServiceImpl implements ProductService {
         productEntity.setProductType(productDTO.getProduct_type());
         productEntity.setProductQuantity(productDTO.getProduct_quantity());
         productEntity.setProductInfo(productDTO.getProduct_type());
+        productEntity.setActive(productDTO.isActive());
         productEntity.setUserId(productDTO.getUserId());
         productRepository.save(productEntity);
         return "Success";
@@ -46,6 +47,7 @@ public class ProductServiceImpl implements ProductService {
        for(ProductEntity productEntity:productEntities){
            ProductDTO productDTO=new ProductDTO();
            productDTO.setProduct_name(productEntity.getProductName());
+           productDTO.setActive(productEntity.isActive());
            productDTO.setProduct_quantity(productEntity.getProductQuantity());
            productDTO.setProduct_info(productEntity.getProductInfo());
            productDTO.setProduct_type(productEntity.getProductType());
@@ -67,6 +69,7 @@ public class ProductServiceImpl implements ProductService {
                 productDTO.setProduct_name(productEntity.getProductName());
                 productDTO.setProduct_quantity(productEntity.getProductQuantity());
                 productDTO.setProduct_info(productEntity.getProductInfo());
+                productDTO.setActive(productEntity.isActive());
                 productDTO.setProduct_type(productEntity.getProductType());
                 productDTO.setId(productEntity.getId());
                 productDTOS.add(productDTO);
