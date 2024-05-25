@@ -14,6 +14,7 @@ public class LoginController {
     LoginService loginService;
 
     @PostMapping("/addUser")
+    @CrossOrigin(origins = "http://localhost:3000")
     @Operation(summary = "To add a new user.")
     public Integer addUser(UserDetailsDTO userDetailsDTO){
         return loginService.addUser(userDetailsDTO);
