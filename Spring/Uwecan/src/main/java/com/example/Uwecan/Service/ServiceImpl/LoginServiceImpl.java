@@ -16,6 +16,7 @@ public class LoginServiceImpl implements LoginService {
         UserDetailsEntity userDetailsEntity=new UserDetailsEntity();
         userDetailsEntity.setAddress(userDetailsDTO.getAddress());
         userDetailsEntity.setName(userDetailsDTO.getName());
+        userDetailsEntity.setUserType(userDetailsDTO.getUserType());
         userDetailsEntity.setPhoneNumber(userDetailsDTO.getPhoneNumber());
         userDetailsRepository.save(userDetailsEntity);
         return userDetailsEntity.getId();
