@@ -8,7 +8,7 @@ public class ProductDTO {
     private String product_name;
     private String product_type;
     private Integer product_quantity;
-    private String product_image;
+    private String product_info;
     private Integer userId;
     private boolean isActive;
 }

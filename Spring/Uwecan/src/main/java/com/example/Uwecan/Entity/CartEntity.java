@@ -14,6 +14,7 @@ public class CartEntity {
     @Column(name = "id")
     private Integer id;
     private Integer productId;
+    private String product_info;
     private Integer userId;
     private Integer productQuantity;
     private String productName;

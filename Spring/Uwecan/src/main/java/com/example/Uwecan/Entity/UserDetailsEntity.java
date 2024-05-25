@@ -14,6 +14,7 @@ public class UserDetailsEntity {
     @Column(name = "id")
     private Integer id;
     private String address;
+    private String userType;
     private String phoneNumber;
     private String name;
 }

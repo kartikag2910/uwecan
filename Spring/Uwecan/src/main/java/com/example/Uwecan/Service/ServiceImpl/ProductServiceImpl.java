@@ -27,7 +27,7 @@ public class ProductServiceImpl implements ProductService {
         productEntity.setProductName(productDTO.getProduct_name());
         productEntity.setProductType(productDTO.getProduct_type());
         productEntity.setProductQuantity(productDTO.getProduct_quantity());
-        productEntity.setProductImage(productDTO.getProduct_type());
+        productEntity.setProductInfo(productDTO.getProduct_type());
         productEntity.setUserId(productDTO.getUserId());
         productRepository.save(productEntity);
         return "Success";
@@ -47,8 +47,9 @@ public class ProductServiceImpl implements ProductService {
            ProductDTO productDTO=new ProductDTO();
            productDTO.setProduct_name(productEntity.getProductName());
            productDTO.setProduct_quantity(productEntity.getProductQuantity());
-           productDTO.setProduct_image(productEntity.getProductImage());
+           productDTO.setProduct_info(productEntity.getProductInfo());
            productDTO.setProduct_type(productEntity.getProductType());
+           productDTO.setProduct_info(productEntity.getProductInfo());
            productDTO.setUserId(productEntity.getUserId());
            productDTO.setId(productEntity.getId());
            productDTOS.add(productDTO);
@@ -65,7 +66,7 @@ public class ProductServiceImpl implements ProductService {
                 ProductDTO productDTO = new ProductDTO();
                 productDTO.setProduct_name(productEntity.getProductName());
                 productDTO.setProduct_quantity(productEntity.getProductQuantity());
-                productDTO.setProduct_image(productEntity.getProductImage());
+                productDTO.setProduct_info(productEntity.getProductInfo());
                 productDTO.setProduct_type(productEntity.getProductType());
                 productDTO.setId(productEntity.getId());
                 productDTOS.add(productDTO);
@@ -82,6 +83,7 @@ public class ProductServiceImpl implements ProductService {
         productEntity.setProductQuantity(productEntity.getProductQuantity()-1);
         CartEntity cartEntity=new CartEntity();
         cartEntity.setProductId(cartDTO.getProductId());
+        cartEntity.setProduct_info(cartDTO.getProduct_info());
         cartEntity.setProductName(cartDTO.getProductName());
         cartEntity.setUserId(cartDTO.getUserId());
         cartEntity.setProductQuantity(cartDTO.getProductQuantity());
@@ -97,6 +99,7 @@ public class ProductServiceImpl implements ProductService {
             CartDTO cartDTO=new CartDTO();
             cartDTO.setProductId(cartEntity.getProductId());
             cartDTO.setProductName(cartEntity.getProductName());
+            cartDTO.setProduct_info(cartEntity.getProduct_info());
             cartDTO.setProductQuantity(cartEntity.getProductQuantity());
             cartDTO.setUserId(cartEntity.getUserId());
             cartDTOS.add(cartDTO);

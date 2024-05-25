@@ -15,7 +15,7 @@ public class ProductEntity {
     private String productName;
     private String productType;
     private Integer productQuantity;
-    private String productImage;
+    private String productInfo;
     private Integer userId;
     private boolean isActive=true;
 }
